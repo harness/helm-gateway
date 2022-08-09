@@ -1,4 +1,4 @@
-#Helm chart for ci-manager
+#Helm chart for gateway
 
 to update/publish:
 

@@ -1,18 +1,18 @@
 apiVersion: v1
 entries:
-  ci-manager:
+  gateway:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-08-09T19:02:59.742375+05:30"
+    created: "2022-08-09T22:59:20.947247+05:30"
     dependencies:
     - name: harness-common
       repository: https://harness.github.io/helm-common/charts
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 634765d59936c9b8e9216dee1d31267e576b15ba6746a4672a4dbf9cebaff7e0
-    name: ci-manager
+    digest: 81631fd137c321d20a02c6be29a4e9161ed469c1b98ccfadfc265a6d0b13fcea
+    name: gateway
     type: application
     urls:
-    - ci-manager-0.1.0.tgz
+    - gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-09T19:02:59.741138+05:30"
+generated: "2022-08-09T22:59:20.945906+05:30"
