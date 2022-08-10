@@ -3,16 +3,16 @@ entries:
   gateway:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-08-09T22:59:20.947247+05:30"
+    created: "2022-08-11T02:09:47.507213+05:30"
     dependencies:
     - name: harness-common
       repository: https://harness.github.io/helm-common/charts
-      version: 0.1.0
+      version: 0.1.1
     description: A Helm chart for Kubernetes
-    digest: 81631fd137c321d20a02c6be29a4e9161ed469c1b98ccfadfc265a6d0b13fcea
+    digest: 8f3412159b7906755ab5a39371d3477ea065502d69b1f48c7e9c3113a9bd3145
     name: gateway
     type: application
     urls:
     - gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-09T22:59:20.945906+05:30"
+generated: "2022-08-11T02:09:47.506015+05:30"
