@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Release.Namespace }}
 data:
   MANAGER_URL: 'http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/'
-  MANAGER_PUBLIC_URL: {{ .Values.global.loadbalancerURL) }}
+  MANAGER_PUBLIC_URL: {{ .Values.global.loadbalancerURL }}
   MEMORY: {{ .Values.java.memory | quote }}
   DEPLOY_MODE: KUBERNETES_ONPREM
   API_VERSION: 'release-gateway:182'
