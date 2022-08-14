@@ -12,7 +12,7 @@ image:
   repository: harness/gateway-signed
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1000138"
 
 java:
   memory: 512
