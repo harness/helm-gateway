@@ -12,7 +12,7 @@ image:
   repository: harness/gateway-signed
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1000138"
+  tag: ""
 
 java:
   memory: 512
@@ -46,26 +46,9 @@ securityContext:
   # runAsNonRoot: true
   # runAsUser: 1000
 
-initContainers:
-  checkForMongo:
-    image:
-      tag: "4.2.19"
-      repository: harness/mongo
-    securityContext:
-      runAsNonRoot: true
-      runAsUser: 999
-  checkForTimescaledb:
-    image:
-      tag: pg13-ts2.6-oss-latest
-      repository: timescale/timescaledb-ha
-    securityContext:
-      runAsNonRoot: true
-      runAsUser: 1000
-
 service:
   type: ClusterIP
   port: 8080
-
 
 resources:
   limits:
