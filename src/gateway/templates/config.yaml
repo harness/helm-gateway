@@ -20,5 +20,5 @@ data:
   {{- if .Values.global.mongoSSL }}
   MONGO_SSL_CONFIG: "true"
   MONGO_SSL_CA_TRUST_STORE_PATH: /opt/harness/keystore.jks
-  MONGO_SSL_CA_TRUST_STORE_PASSWORD: password 
+  MONGO_SSL_CA_TRUST_STORE_PASSWORD: password
   {{- end }}

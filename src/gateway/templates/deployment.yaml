@@ -16,7 +16,7 @@ spec:
       maxUnavailable: {{.Values.maxUnavailable}}
   selector:
     matchLabels:
-      {{- include "gateway.selectorLabels" . | nindent 6 }} 
+      {{- include "gateway.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -29,7 +29,7 @@ spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
-      {{- end }}  
+      {{- end }}
       serviceAccountName: {{ include "gateway.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
@@ -77,11 +77,11 @@ spec:
                   name: harness-secrets
                   key: mongodbPassword
             - name: MONGO_DB_URL
-              value: {{ include "harnesscommon.database.mongo" (dict "database" "gateway" "context" $) }}                    
+              value: {{ include "harnesscommon.database.mongo" (dict "database" "gateway" "context" $) }}
           envFrom:
           - configMapRef:
-              name: gateway      
-      affinity:  
+              name: gateway
+      affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:

@@ -38,7 +38,7 @@ imagePullSecrets: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext: 
+securityContext:
   runAsUser: 65534
   runAsNonRoot: true
   # capabilities:
@@ -72,4 +72,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
