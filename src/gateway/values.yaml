@@ -9,10 +9,12 @@ maxSurge: 1
 maxUnavailable: 0
 
 image:
+  registry: docker.io
   repository: harness/gateway-signed
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1000138"
+  digest: ""
 
 java:
   memory: 512
