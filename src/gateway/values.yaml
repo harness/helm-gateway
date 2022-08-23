@@ -16,6 +16,14 @@ image:
   tag: "1000138"
   digest: ""
 
+waitForInitContainer:
+  image:
+    registry: ghcr.io
+    repository: groundnuty/k8s-wait-for
+    pullPolicy: IfNotPresent
+    tag: "v1.6"
+    digest: ""
+
 java:
   memory: 512
 
