@@ -40,6 +40,19 @@ spec:
           secret:
             secretName: mongodb-replicaset-ssl-cert
       {{- end }}
+      initContainers:
+      - name: wait-for-mongo
+        image: {{ include "common.images.image" (dict "imageRoot" .Values.waitForInitContainer.image "global" .Values.global) }}
+        imagePullPolicy: IfNotPresent
+        args:
+          - "pod"
+          - "-lapp=mongodb-replicaset"
+      - name: wait-for-timescale
+        image: {{ include "common.images.image" (dict "imageRoot" .Values.waitForInitContainer.image "global" .Values.global) }}
+        imagePullPolicy: IfNotPresent
+        args:
+          - "pod"
+          - "-lapp=timescaledb-single-chart"
       containers:
         - name: gateway
           image: {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
