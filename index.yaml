@@ -3,6 +3,23 @@ entries:
   gateway:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-08-24T14:29:07.290171071Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.x.x
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: bd5a832cb2f61f0a40f5ab738df8d8dee0a8a086e6a4a01794d66f9bb471909b
+    name: gateway
+    type: application
+    urls:
+    - https://github.com/harness/helm-gateway/releases/download/gateway-0.2.3/gateway-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-08-23T18:25:18.100290617Z"
     dependencies:
     - name: common
@@ -52,4 +69,4 @@ entries:
     urls:
     - https://github.com/harness/helm-gateway/releases/download/gateway-0.2.0/gateway-0.2.0.tgz
     version: 0.2.0
-generated: "2022-08-23T18:25:18.100303917Z"
+generated: "2022-08-24T14:29:07.290195471Z"
