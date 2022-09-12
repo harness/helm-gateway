@@ -21,4 +21,5 @@ data:
   MONGO_SSL_CONFIG: "true"
   MONGO_SSL_CA_TRUST_STORE_PATH: /opt/harness/keystore.jks
   MONGO_SSL_CA_TRUST_STORE_PASSWORD: password
+  HARNESS_ENABLE_NG_AUTH_UI : true
   {{- end }}
