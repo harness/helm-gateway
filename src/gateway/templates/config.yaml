@@ -17,9 +17,9 @@ data:
   SENTINEL_MASTER_NAME: 'harness-redis'
   REDIS_PORT: '26379'
   REDIS_SENTINELS: 'redis-sentinel-harness-announce-0.{{ .Release.Namespace }},redis-sentinel-harness-announce-1.{{ .Release.Namespace }},redis-sentinel-harness-announce-2.{{ .Release.Namespace }}'
+  HARNESS_ENABLE_NG_AUTH_UI : 'true'
   {{- if .Values.global.mongoSSL }}
   MONGO_SSL_CONFIG: "true"
   MONGO_SSL_CA_TRUST_STORE_PATH: /opt/harness/keystore.jks
   MONGO_SSL_CA_TRUST_STORE_PASSWORD: password
-  HARNESS_ENABLE_NG_AUTH_UI : true
   {{- end }}
