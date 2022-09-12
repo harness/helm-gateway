@@ -3,6 +3,20 @@ entries:
   gateway:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-09-12T12:23:19.764633478Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 07a0b312df73847204ffac3a5adafe1e18089b6dbe30d25924441f4659d7ef0e
+    name: gateway
+    type: application
+    urls:
+    - https://github.com/harness/helm-gateway/releases/download/gateway-0.2.8/gateway-0.2.8.tgz
+    version: 0.2.8
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-09-01T12:39:21.591325913Z"
     dependencies:
     - name: harness-common
@@ -134,4 +148,4 @@ entries:
     urls:
     - https://github.com/harness/helm-gateway/releases/download/gateway-0.2.0/gateway-0.2.0.tgz
     version: 0.2.0
-generated: "2022-09-01T12:39:21.591403317Z"
+generated: "2022-09-12T12:23:19.764672678Z"
