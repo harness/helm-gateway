@@ -59,19 +59,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           securityContext:
               {{- toYaml .Values.securityContext | nindent 12 }}
-          readinessProbe:
-            httpGet:
-              path: /actuator/health
-              port: gateway-port
-            initialDelaySeconds: 120
-            periodSeconds: 10
-          livenessProbe:
-            httpGet:
-              path: /actuator/health
-              port: gateway-port
-            initialDelaySeconds: 180
-            periodSeconds: 20
-            failureThreshold: 2
+          {{- toYaml .Values.probes | nindent 10}}
           ports:
           - name: gateway-port
             containerPort: {{.Values.service.port}}
